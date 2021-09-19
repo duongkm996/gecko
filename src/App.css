@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.red {
+  color: #ea3943;
+}
+
+.green {
+  color: #16c784;
+}
+
+.font-bold {
+  font-weight: 700;
+}
