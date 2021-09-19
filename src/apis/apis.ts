@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getGlobal = async () => {
   try {
-    const result = await axios.get("http://localhost:5000/api/coins/global", {
+    const result = await axios.get("http://207.148.127.143/api/coins/global", {
       headers: {
         Accept: "application/json",
       },
