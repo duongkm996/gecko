@@ -9,7 +9,7 @@ function useGetTrending(): [() => void, ItemTrending[] | undefined, boolean] {
     const onGetTrending = async () => {
         setLoading(true);
         try {
-            const result: any = await axios.get(`http://localhost:5000/api/coins/trending`, {
+            const result: any = await axios.get(`http://207.148.127.143/api/coins/trending`, {
                 headers: {
                     Accept: "application/json",
                 }

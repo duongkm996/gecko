@@ -9,7 +9,7 @@ function useGetDetail(): [(id: string) => void, any | undefined, boolean] {
     const onGetDetail = async (id: string) => {
         setLoading(true);
         try {
-            const result: any = await axios.get(`http://localhost:5000/api/coins/detail/${id}`, {
+            const result: any = await axios.get(`http://207.148.127.143/api/coins/detail/${id}`, {
                 headers: {
                     Accept: "application/json",
                 }
