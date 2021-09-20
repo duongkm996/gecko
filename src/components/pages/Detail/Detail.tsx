@@ -2,7 +2,6 @@ import { Breadcrumb, Spin } from 'antd';
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router';
 import useGetDetail from '../../../hooks/useGetDetail';
-import Trending from '../../trending';
 import Chart from './Chart';
 import LeftInfo from './LeftInfo';
 import MarketStat from './MarketStat';
@@ -24,7 +23,7 @@ function Detail() {
     }
 
     return (
-        <div>
+        <>
             {resDetail ? <div>
                 <Breadcrumb>
                     <Breadcrumb.Item>
@@ -41,8 +40,7 @@ function Detail() {
                     <MarketStat resDetail={resDetail} />
                 </div>
             </div> : ""}
-            <Trending />
-        </div>
+        </>
     )
 }
 

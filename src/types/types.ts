@@ -88,3 +88,8 @@ export interface SwapParams {
   price: number;
   account: string;
 }
+
+export interface Token {
+  name: string;
+  symbol: string;
+}

@@ -15,7 +15,6 @@ function App() {
 
     return (
         <div className="container">
-            <Header />
             <AppRouter />
         </div>
     );
