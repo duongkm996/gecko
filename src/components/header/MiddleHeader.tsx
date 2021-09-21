@@ -8,7 +8,9 @@ function MiddleHeader() {
     const renderContent = () => {
         if (resGlobal && Object.keys(resGlobal).length > 0) {
             const list = Object.entries(resGlobal.market_cap_percentage).map((item, index) => {
-                return <div className="mr-4" key={index}><span className="title">{item[0].toUpperCase()} {item[1].toFixed(1)}%</span></div>
+                if (index < 8) {
+                    return <div className="mr-4" key={index}><span className="title">{item[0].toUpperCase()} {item[1].toFixed(1)}%</span></div>
+                }
             })
             return (<>
                 <div className="mr-3"><span className="font-bold">Dominance</span>: </div>
