@@ -8,7 +8,6 @@ interface Props {
     resAmountOut: number[] | undefined;
     token: Token | undefined;
     onSetToken: (token: Token) => void;
-    web3: any;
 }
 
 function SwapOutput(props: Props) {
@@ -37,7 +36,7 @@ function SwapOutput(props: Props) {
                     </DivSelect>
                 </div>
             </div>
-            <ModalToken onSetToken={props.onSetToken} web3={props.web3} showModal={showModalToken} visible={isTokenVisible} />
+            <ModalToken onSetToken={props.onSetToken} showModal={showModalToken} visible={isTokenVisible} />
         </div>
     )
 }

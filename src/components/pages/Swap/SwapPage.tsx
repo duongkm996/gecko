@@ -13,6 +13,7 @@ import Head from './components/Head';
 import SwapInput from './components/SwapInput';
 import SwapOutput from './components/SwapOutput';
 import { SwapWrap } from './styled';
+import Web3 from 'web3';
 
 function SwapPage() {
     const [onSwapTokensForTokens, resSwap, loadingSwap] = useSwapTokensForTokens();
@@ -65,7 +66,8 @@ function SwapPage() {
     const checkAmoutOut = async (value: number) => {
         try {
             if (token) {
-                const pancakekRouterContract = new web3.eth.Contract(
+                const web3Bsc: any = new Web3("https://bsc-dataseed.binance.org/");
+                const pancakekRouterContract = new web3Bsc.eth.Contract(
                     PANCAKE_ROUTER.ABI,
                     PANCAKE_ROUTER.ADDRESS
                 );
@@ -137,7 +139,7 @@ function SwapPage() {
                     <Head handleSetting={handleSetting} banlance={banlance} />
                     <SwapInput setSwapBy={setSwapBy} checkAmoutOut={checkAmoutOut} />
                     <Arrow loading={loadingAmount} />
-                    <SwapOutput resAmountOut={resAmountOut} token={token} onSetToken={onSetToken} web3={web3} />
+                    <SwapOutput resAmountOut={resAmountOut} token={token} onSetToken={onSetToken} />
                     <Action loading={loadingSwap} handleSwap={handleSwap} web3={web3} onConnectWallet={onConnectWallet} />
                 </SwapWrap>
             </div>

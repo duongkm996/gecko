@@ -19,7 +19,7 @@ function Head(props: Props) {
             <div className="head d-flex pt-4">
                 <div>
                     <h4>PancakeSwap</h4>
-                    <p><small>BNB: {parseFloat(props.banlance).toFixed(4)}</small></p>
+                    <p><small>BNB: {props.banlance && parseFloat(props.banlance).toFixed(4)}</small></p>
                 </div>
                 <div className="ml-auto align-self-center">
                     <span className="setting" onClick={() => showModalSetting(true)}><SettingFilled /></span>

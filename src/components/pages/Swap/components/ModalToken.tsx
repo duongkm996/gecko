@@ -5,11 +5,11 @@ import useCheckAddressToken from '../../../../hooks/swap/useCheckAddressToken';
 import { Token } from '../../../../types/types';
 import { InputAddressTokenWrap } from '../styled';
 import TokenChecker from './TokenChecker';
+import Web3 from 'web3';
 
 interface Props {
     visible: boolean;
     showModal: (visible: boolean) => void;
-    web3: any;
     onSetToken: (token: Token) => void;
 }
 
@@ -19,7 +19,8 @@ function ModalToken(props: Props) {
     const handleChangeAddress = (event: any) => {
         try {
             const { value } = event.target;
-            const commonContract = new props.web3.eth.Contract(
+            const web3Bsc: any = new Web3("https://bsc-dataseed.binance.org/");
+            const commonContract = new web3Bsc.eth.Contract(
                 WBNB.ABI,
                 value
             );
