@@ -20,6 +20,9 @@ function AppRouter() {
                     <Route path="/swap/pancake">
                         <SwapPage />
                     </Route>
+                    <Route path="/swap/flash-swap">
+                        <BuySwap />
+                    </Route>
                     <Route path="/">
                         <Home />
                     </Route>

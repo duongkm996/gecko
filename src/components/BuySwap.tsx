@@ -63,7 +63,7 @@ function BuySwap(props: Props) {
         const routerContract = new web3.eth.Contract(
             PANCAKE_ROUTER.ABI,
             PANCAKE_ROUTER.ADDRESS
-        );;
+        );
         const { amountIn, perSlippage, gasPrice, gasLimit, swapBy, price } = params;
         if (swapBy === "BNB") {
             const pair = [WBNB_ADDRESS, params.address];

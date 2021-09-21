@@ -8,6 +8,10 @@ function MainHeader() {
         history.push('/swap/pancake')
     }
 
+    const redirectFlash = () => {
+        history.push('/swap/flash-swap')
+    }
+
     return (
         <div>
             <div className="main-header">
@@ -24,7 +28,10 @@ function MainHeader() {
                                 <a className="nav-link" onClick={() => history.push('/')}>Coins</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" onClick={() => redirectPancake()}>PancakeSwap</a>
+                                <a className="nav-link" onClick={() => redirectPancake()}>Pancake Swap</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" onClick={() => redirectFlash()}>Flash Swap</a>
                             </li>
                         </ul>
                     </div>

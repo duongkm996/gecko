@@ -27,15 +27,21 @@ export const SwapWrap = styled.div`
   }
 `;
 
-export const BtnSpeedWrap = styled(Button)`
-  color: rgb(31, 199, 212);
-  border-radius: 16px;
-  font-size: 16px;
-  font-weight: 600;
-  align-items: center;
-  justify-content: center;
-  line-height: 0.5;
-  &:focus {
+export const BtnSpeedWrap = styled.div`
+  button {
+    color: rgb(31, 199, 212);
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.5;
+    &:focus {
+      background-color: rgb(31, 199, 212);
+      color: white;
+    }
+  }
+  .active {
     background-color: rgb(31, 199, 212);
     color: white;
   }
@@ -93,5 +99,22 @@ export const TokenWrap = styled.div`
   padding: 10px;
   &:hover {
     background: #eee;
+  }
+`;
+
+export const InputNumberRadius = styled.div`
+  .ant-input-number-handler-wrap {
+    display: none;
+  }
+  .ant-input-number {
+    border-radius: 15px;
+    width: 100px;
+  }
+`;
+
+export const InputAddressTokenWrap = styled.div`
+  input {
+    border-radius: 15px;
+    padding: 10px;
   }
 `;

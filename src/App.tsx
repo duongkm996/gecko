@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { fetchGlobal } from '../src/slices/globalSlice';
 import './App.css';
-import Header from './components/header';
-import { fetchGlobal } from './globalSlice';
 import AppRouter from './route/AppRouter';
 import type { AppDispatch } from './store';
 

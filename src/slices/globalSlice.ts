@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
-import { getGlobal } from "./apis/apis";
-import { Global } from "./types/types";
+import { getGlobal } from "../apis/apis";
+import { Global } from "../types/types";
 
 export const fetchGlobal = createAsyncThunk("coins/fetchGlobal", async () => {
   const response = await getGlobal();

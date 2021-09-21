@@ -92,4 +92,11 @@ export interface SwapParams {
 export interface Token {
   name: string;
   symbol: string;
+  address: string;
+}
+
+export interface Setting {
+  gasPrice?: number;
+  account?: string;
+  slippage?: number;
 }

@@ -1,6 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react'
-import { Global } from '../types/types';
+import { useState } from 'react';
 
 function useGetDetail(): [(id: string) => void, any | undefined, boolean] {
     const [resDetail, setResDetail] = useState<any>();
