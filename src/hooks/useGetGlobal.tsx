@@ -8,7 +8,7 @@ function useGetGlobal(): [() => void, Global | undefined, boolean] {
 
     const onGetGlobal = async () => {
         try {
-            const result: any = await axios.get('http://207.148.127.143/api/coins/global', {
+            const result: any = await axios.get('http://cryptofinance.life/api/coins/global', {
                 headers: {
                     Accept: "application/json",
                 }

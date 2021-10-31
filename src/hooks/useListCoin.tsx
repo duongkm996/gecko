@@ -14,7 +14,7 @@ function useListCoin(): [(req: ListReq) => void, any, boolean] {
     const onGetList = async (req: ListReq) => {
         try {
             setLoading(true);
-            const result: any = await axios.get('http://207.148.127.143/api/coins/markets', {
+            const result: any = await axios.get('http://cryptofinance.life/api/coins/markets', {
                 headers: {
                     Accept: "application/json",
                 },
