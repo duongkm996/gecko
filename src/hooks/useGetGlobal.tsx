@@ -15,6 +15,7 @@ function useGetGlobal(): [() => void, Global | undefined, boolean] {
                 }
             });
             const resultData = result.data;
+            
             if (resultData.status === 200) {
                 setResGlobal(resultData.result);
             }

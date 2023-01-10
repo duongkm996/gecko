@@ -33,7 +33,7 @@ function ModalSetting(props: Props) {
         props.handleSetting(value, refSlip.current.value);
     }
 
-    const onChangeSlip = (value: number) => {
+    const onChangeSlip = (value: any) => {
         props.handleSetting(activeSpeed, value);
     }
 

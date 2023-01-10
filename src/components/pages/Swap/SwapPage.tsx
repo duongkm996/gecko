@@ -63,7 +63,7 @@ function SwapPage() {
     }
     const [onGetAmountOut, resAmountOut, loadingAmount] = useGetAmountOut();
 
-    const checkAmoutOut = async (value: number) => {
+    const checkAmoutOut = async (value: any) => {
         try {
             if (token) {
                 const web3Bsc: any = new Web3("https://bsc-dataseed.binance.org/");
@@ -71,7 +71,9 @@ function SwapPage() {
                     PANCAKE_ROUTER.ABI,
                     PANCAKE_ROUTER.ADDRESS
                 );
-                onGetAmountOut(pancakekRouterContract, value, [swapBy, token.address]);
+                if (value) {
+                    onGetAmountOut(pancakekRouterContract, value, [swapBy, token.address]);
+                }
             }
         } catch (error) {
             console.log(error);

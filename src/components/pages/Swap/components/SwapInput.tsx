@@ -15,7 +15,7 @@ const listSwapBy = [
 ];
 
 interface Props {
-    checkAmoutOut: (value: number) => void;
+    checkAmoutOut: (value: any) => void;
     setSwapBy: (value: string) => void;
 }
 
