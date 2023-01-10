@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { BASE_URL } from '../const';
 import { Coin } from '../types/types';
 
 interface ListReq {
@@ -14,7 +15,7 @@ function useListCoin(): [(req: ListReq) => void, any, boolean] {
     const onGetList = async (req: ListReq) => {
         try {
             setLoading(true);
-            const result: any = await axios.get('http://cryptofinance.life/api/coins/markets', {
+            const result: any = await axios.get(`${BASE_URL}/api/coins/markets`, {
                 headers: {
                     Accept: "application/json",
                 },

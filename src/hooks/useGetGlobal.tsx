@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { BASE_URL } from '../const';
 import { Global } from '../types/types';
 
 function useGetGlobal(): [() => void, Global | undefined, boolean] {
@@ -8,7 +9,7 @@ function useGetGlobal(): [() => void, Global | undefined, boolean] {
 
     const onGetGlobal = async () => {
         try {
-            const result: any = await axios.get('http://cryptofinance.life/api/coins/global', {
+            const result: any = await axios.get(`${BASE_URL}/api/coins/global`, {
                 headers: {
                     Accept: "application/json",
                 }

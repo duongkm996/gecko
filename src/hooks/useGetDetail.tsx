@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { BASE_URL } from '../const';
 
 function useGetDetail(): [(id: string) => void, any | undefined, boolean] {
     const [resDetail, setResDetail] = useState<any>();
@@ -8,7 +9,7 @@ function useGetDetail(): [(id: string) => void, any | undefined, boolean] {
     const onGetDetail = async (id: string) => {
         setLoading(true);
         try {
-            const result: any = await axios.get(`http://cryptofinance.life/api/coins/detail/${id}`, {
+            const result: any = await axios.get(`${BASE_URL}/api/coins/detail/${id}`, {
                 headers: {
                     Accept: "application/json",
                 }

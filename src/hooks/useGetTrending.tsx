@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { BASE_URL } from '../const';
 import { ItemTrending } from '../types/types';
 
 function useGetTrending(): [() => void, ItemTrending[] | undefined, boolean] {
@@ -9,7 +10,7 @@ function useGetTrending(): [() => void, ItemTrending[] | undefined, boolean] {
     const onGetTrending = async () => {
         setLoading(true);
         try {
-            const result: any = await axios.get(`http://cryptofinance.life/api/coins/trending`, {
+            const result: any = await axios.get(`${BASE_URL}/api/coins/trending`, {
                 headers: {
                     Accept: "application/json",
                 }
